@@ -34,7 +34,8 @@ async def delete_all():
 
 @app.get("/")
 def myfunc():
-    return {"message": "Hello World!"}
+    return {"message": "Hello from Mergim’s FastAPI!"}
+
 
 
 
