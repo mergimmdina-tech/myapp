@@ -31,3 +31,16 @@ async def delete_all():
     cursor.close()
     conn.close()
     return {"success": True}
+
+@app.get("/")
+def myfunc():
+    return {"message": "Hello World!"}
+
+
+
+
+
+
+
+
+
