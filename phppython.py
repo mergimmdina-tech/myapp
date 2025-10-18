@@ -14,10 +14,10 @@ app.add_middleware(
 
 def get_db_connection():
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Gimi2025",
-        database="databazaefundit"
+        host="sql103.infinityfree.com",
+        user="if0_40195210",
+        password="mqSti6RMjKeweDJ",
+        database="if0_40195210_test_database"
     )
     return conn
 
@@ -35,6 +35,7 @@ async def delete_all():
 @app.get("/")
 def myfunc():
     return {"message": "Hello from Mergim’s FastAPI!"}
+
 
 
 
