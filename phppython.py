@@ -7,17 +7,23 @@ app = FastAPI()
 # Lejon kërkesa nga frontend lokal
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://mergimapp.infinityfreeapp.com/index.php"],  # mund ta limitosh vetëm për localhost
+  # allow_origins=["https://mergimapp.infinityfreeapp.com/index.php"],  # mund ta limitosh vetëm për localhost
+    allow_origins=["http://localhost/ushNeligjerata/aplikacioni/test.php"]
     allow_methods=["*"],
     allow_headers=["*"]
 )
 
 def get_db_connection():
     conn = mysql.connector.connect(
-        host="sql103.infinityfree.com",
-        user="if0_40195210",
-        password="mqSti6RMjKeweDJ",
-        database="if0_40195210_test_database"
+        # host="sql103.infinityfree.com",
+        # user="if0_40195210",
+        # password="mqSti6RMjKeweDJ",
+        # database="if0_40195210_test_database"
+
+        host="local",
+        user="root",
+        password="Gimi2025",
+        database="databazaefundit"
     )
     return conn
 
@@ -35,6 +41,7 @@ async def delete_all():
 @app.get("/")
 def myfunc():
     return {"message": "Hello from Mergim’s FastAPI!"}
+
 
 
 
