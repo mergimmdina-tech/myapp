@@ -20,10 +20,16 @@ def get_db_connection():
         # password="mqSti6RMjKeweDJ",
         # database="if0_40195210_test_database"
 
-        host="localhost",
-        user="root",
-        password="Gimi2025",
-        database="databazaefundit"
+
+        host = "sql300.infinityfree.com",
+        user = "if0_40243036",
+        password = "RjBUIgImvy4B",
+        database = "if0_40243036_dbfundit"
+
+        # host="localhost",
+        # user="root",
+        # password="Gimi2025",
+        # database="databazaefundit"
     )
     return conn
 
@@ -41,6 +47,7 @@ async def delete_all():
 @app.get("/")
 def myfunc():
     return {"message": "Hello from Mergim’s FastAPI!"}
+
 
 
 
