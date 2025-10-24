@@ -33,12 +33,29 @@ def get_db_connection():
     )
     return conn
 
+# @app.post("/delete_all")
+# async def delete_all():
+#     conn = get_db_connection()
+#     cursor = conn.cursor()
+#     cursor.execute("DELETE FROM registration_details")
+#                                 # registration_details
+#     conn.commit()
+#     cursor.close()
+#     conn.close()
+#     return {"success": True}
+
 @app.post("/delete_all")
-async def delete_all():
+async def delete_all(request: Request):
+
+    data = await request.json()
+    d = data.get("d")
+
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM registration_details")
+    cursor.execute(f"DELETE FROM registration_details WHERE username = '{d}' ")
                                 # registration_details
+    print("Duke fshirë përdoruesin:", d)
+
     conn.commit()
     cursor.close()
     conn.close()
@@ -47,6 +64,7 @@ async def delete_all():
 @app.get("/")
 def myfunc():
     return {"message": "Hello from Mergim’s FastAPI!"}
+
 
 
 
