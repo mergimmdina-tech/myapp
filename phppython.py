@@ -8,7 +8,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
   # allow_origins=["https://mergimapp.infinityfreeapp.com/index.php"],  # mund ta limitosh vetëm për localhost
-    allow_origins=["http://localhost/ushNeligjerata/aplikacioni/test.php"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"]
 )
@@ -47,6 +47,7 @@ async def delete_all():
 @app.get("/")
 def myfunc():
     return {"message": "Hello from Mergim’s FastAPI!"}
+
 
 
 
