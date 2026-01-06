@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Request
-from fastapi.middleware.cors import CORSMiddleware
-import mysql.connector
+# from fastapi import FastAPI, Request
+# from fastapi.middleware.cors import CORSMiddleware
+# import mysql.connector
 
 # app = FastAPI()
 
@@ -14,25 +14,25 @@ import mysql.connector
 #     allow_headers=["*"]
 # )
 #komentin ketu posht largoje deri te  (return conn)
-def get_db_connection():
-    conn = mysql.connector.connect(
-        # host="sql103.infinityfree.com",
-        # user="if0_40195210",
-        # password="mqSti6RMjKeweDJ",
-        # database="if0_40195210_test_database"
+# def get_db_connection():
+#     conn = mysql.connector.connect(
+#         # host="sql103.infinityfree.com",
+#         # user="if0_40195210",
+#         # password="mqSti6RMjKeweDJ",
+#         # database="if0_40195210_test_database"
 
 
-        host = "sql300.infinityfree.com",
-        user = "if0_40243036",
-        password = "RjBUIgImvy4B",
-        database = "if0_40243036_dbfundit"
+#         host = "sql300.infinityfree.com",
+#         user = "if0_40243036",
+#         password = "RjBUIgImvy4B",
+#         database = "if0_40243036_dbfundit"
 
-        # host="localhost",
-        # user="root",
-        # password="Gimi2025",
-        # database="databazaefundit"
-    )
-    return conn
+#         # host="localhost",
+#         # user="root",
+#         # password="Gimi2025",
+#         # database="databazaefundit"
+#     )
+#     return conn
 
 # @app.post("/delete_all")
 # async def delete_all():
@@ -146,6 +146,7 @@ def update_person(name: str, age: int):
             person.age = age
             return {"message": f"Mosha e {name} u përditësua me sukses!", "person": person.dict()}
     return {"message": f"{name} nuk u gjet në listë."}
+
 
 
 
