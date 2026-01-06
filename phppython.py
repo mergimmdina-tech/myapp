@@ -70,9 +70,9 @@ def get_db_connection():
 
 #------------------------------------------------------------------------------------------------------------------------
 
-@app.get("/s")
-def fa():
-    return "hello world"
+# @app.get("/s")
+# def fa():
+#     return "hello world"
 
 #------------------------------------------------------------------------------------------------------------------------
 
@@ -146,6 +146,7 @@ def update_person(name: str, age: int):
             person.age = age
             return {"message": f"Mosha e {name} u përditësua me sukses!", "person": person.dict()}
     return {"message": f"{name} nuk u gjet në listë."}
+
 
 
 
