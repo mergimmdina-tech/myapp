@@ -66,7 +66,11 @@ def myfunc():
     return {"message": "Hello from Mergim’s FastAPI!"}
 
 
+#------------------------------------------------------------------------------------------------------------------------
 
+@app.get("/s")
+def fa():
+    return "hello world"
 
 
 
